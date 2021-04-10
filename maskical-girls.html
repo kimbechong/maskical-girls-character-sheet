@@ -1,0 +1,38 @@
+<!-- https://wiki.roll20.net/CSS_Wizardry#Tabs -->
+<!-- https://wiki.roll20.net/Button#Action_Button -->
+<div>
+  <!-- action buttons used as event to trigger sheetworkers -->
+  <!-- `type` attribute must be set to `action` -->
+  <!-- `name` attribute must be defined  & have an `act_` prefix -->
+  <button type="action" name="act_character">Character</button>
+  <button type="action" name="act_relationships">Relationships</button>
+  <button type="action" name="act_backstory">Backstory</button>
+  <button type="action" name="act_journal">Journal</button>
+</div>
+
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='character' />
+
+<div class="sheet-character">
+  <h2>Character</h2>
+</div>
+</div>
+<div class="sheet-relationships">
+  <h2>Relationships</h2>
+</div>
+<div class="sheet-backstory">
+  <h2>Backstory</h2>
+</div>
+<div class="sheet-journal">
+  <h2>Journal</h2>
+</div>
+
+<script type="text/worker">
+  const tabsList = ["character", "relationships", "backstory", "journal"];
+  tabsList.forEach(button => {
+      on(`clicked:${button}`, function() {
+          setAttrs({
+              sheetTab: button
+          });
+      });
+  });
+</script>
