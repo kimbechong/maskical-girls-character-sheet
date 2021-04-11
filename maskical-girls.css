@@ -1,0 +1,15 @@
+/*Configure the tab buttons*/
+.sheet-character,
+.sheet-relationships,
+.sheet-backstory,
+.sheet-journal {
+	display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="relationships"] ~ div.sheet-relationships,
+.sheet-tabstoggle[value="backstory"] ~ div.sheet-backstory,
+.sheet-tabstoggle[value="journal"] ~ div.sheet-journal {
+	display: block;
+}
