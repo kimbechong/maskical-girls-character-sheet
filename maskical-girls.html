@@ -4,16 +4,16 @@
   <!-- action buttons used as event to trigger sheetworkers -->
   <!-- `type` attribute must be set to `action` -->
   <!-- `name` attribute must be defined  & have an `act_` prefix -->
-  <button type="action" name="act_character">Character</button>
+  <button type="action" name="act_mechanics">Mechanics</button>
   <button type="action" name="act_relationships">Relationships</button>
   <button type="action" name="act_backstory">Backstory</button>
   <button type="action" name="act_journal">Journal</button>
 </div>
 
-<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='character' />
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='mechanics' />
 
-<div class="sheet-character">
-  <h2>Character</h2>
+<div class="sheet-mechanics">
+  <h2>Mechanics</h2>
 </div>
 </div>
 <div class="sheet-relationships">
@@ -27,7 +27,7 @@
 </div>
 
 <script type="text/worker">
-  const tabsList = ["character", "relationships", "backstory", "journal"];
+  const tabsList = ["mechanics", "relationships", "backstory", "journal"];
   tabsList.forEach(button => {
       on(`clicked:${button}`, function() {
           setAttrs({

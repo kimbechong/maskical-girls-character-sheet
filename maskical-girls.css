@@ -1,5 +1,5 @@
 /*Configure the tab buttons*/
-.sheet-character,
+.sheet-mechanics,
 .sheet-relationships,
 .sheet-backstory,
 .sheet-journal {
@@ -7,7 +7,7 @@
 }
 
 /* show the selected tab */
-.sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="mechanics"] ~ div.sheet-mechanics,
 .sheet-tabstoggle[value="relationships"] ~ div.sheet-relationships,
 .sheet-tabstoggle[value="backstory"] ~ div.sheet-backstory,
 .sheet-tabstoggle[value="journal"] ~ div.sheet-journal {
