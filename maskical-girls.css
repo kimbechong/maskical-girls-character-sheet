@@ -11,5 +11,9 @@
 .sheet-tabstoggle[value="relationships"] ~ div.sheet-relationships,
 .sheet-tabstoggle[value="backstory"] ~ div.sheet-backstory,
 .sheet-tabstoggle[value="journal"] ~ div.sheet-journal {
-	display: block;
+	display: grid;
+}
+
+.sheet-mechanics {
+	grid-template-columns: 1fr 1fr;
 }
