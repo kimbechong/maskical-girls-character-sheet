@@ -7,6 +7,7 @@ Maskical Girls is a Powered by the Apocalypse tabletop roleplaying game. It take
 * [Building Character Sheets](https://wiki.roll20.net/Building_Character_Sheets)
 * [Designing Character Sheet Layout](https://wiki.roll20.net/Designing_Character_Sheet_Layout)
 * [Intro to Sheet Development](https://help.roll20.net/hc/en-us/articles/360037773413-Intro-to-Sheet-Development)
+* [Character Sheet Enhancement](https://wiki.roll20.net/Character_Sheet_Enhancement)
 
 ## Check out my progress! :coffee: :ballot_box_with_check:
 [Kanban](https://www.notion.so/8f1b85e1557e41519c403cd78463cae4?v=6db40c603acb448398bb33f8eeb7f007)
