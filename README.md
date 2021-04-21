@@ -14,5 +14,5 @@ Maskical Girls is a Powered by the Apocalypse tabletop roleplaying game. It take
 * [A Complete Guide to Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
-## Check out my progress! :coffee: :ballot_box_with_check:
+## Check out my progress! :ballot_box_with_check:
 [Kanban](https://www.notion.so/8f1b85e1557e41519c403cd78463cae4?v=6db40c603acb448398bb33f8eeb7f007)
