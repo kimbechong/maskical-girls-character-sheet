@@ -1,33 +1,62 @@
 <!-- https://wiki.roll20.net/CSS_Wizardry#Tabs -->
 <!-- https://wiki.roll20.net/Button#Action_Button -->
+
 <div>
   <!-- action buttons used as event to trigger sheetworkers -->
   <!-- `type` attribute must be set to `action` -->
   <!-- `name` attribute must be defined  & have an `act_` prefix -->
-  <button type="action" name="act_character">Character</button>
+  <button type="action" name="act_mechanics">Mechanics</button>
   <button type="action" name="act_relationships">Relationships</button>
   <button type="action" name="act_backstory">Backstory</button>
   <button type="action" name="act_journal">Journal</button>
 </div>
 
-<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='character' />
+<input type='hidden' class='tabstoggle' name='attr_sheetTab'  value='mechanics' />
 
-<div class="sheet-character">
-  <h2>Character</h2>
+<div class="mechanics" >
+  <h2 class="header">Mechanics</h2>
+  <div class="aspects">
+    <h3>Aspects</h3>
+    <div class="stat">
+      <button type="roll" name="roll_rebel" value="/roll 2d6 + @{rebel}" ></button>
+      <input type="number" name="attr_rebel" value="0"/>
+      <label>Rebel</label>
+    </div>
+    <div class="stat">
+      <button type="roll" name="roll_witch" value="/roll 2d6 + @{witch}" ></button>
+      <input type="number" name="attr_witch" value="0"/>
+      <label>Witch</label>
+    </div>
+    <div class="stat">
+      <button type="roll" name="roll_savior" value="/roll 2d6 + @{savior}" ></button>
+      <input type="number" name="attr_savior" value="0"/>
+      <label>Savior</label>
+    </div>
+    <div class="stat">
+      <button type="roll" name="roll_devil" value="/roll 2d6 + @{devil}" ></button>
+      <input type="number" name="attr_devil" value="0"/>
+      <label>Devil</label>
+    </div>
+    <div class="stat">
+      <button type="roll" name="roll_human" value="/roll 2d6 + @{human}" ></button>
+      <input type="number" name="attr_human" value="0"/>
+      <label>Human</label>
+    </div>
+  </div>
 </div>
 </div>
-<div class="sheet-relationships">
+<div class="relationships">
   <h2>Relationships</h2>
 </div>
-<div class="sheet-backstory">
+<div class="backstory">
   <h2>Backstory</h2>
 </div>
-<div class="sheet-journal">
+<div class="journal">
   <h2>Journal</h2>
 </div>
 
 <script type="text/worker">
-  const tabsList = ["character", "relationships", "backstory", "journal"];
+  const tabsList = ["mechanics", "relationships", "backstory", "journal"];
   tabsList.forEach(button => {
       on(`clicked:${button}`, function() {
           setAttrs({
