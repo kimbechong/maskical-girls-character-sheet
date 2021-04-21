@@ -2,45 +2,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Montserrat&display=swap');
 
 /*Configure the tab buttons*/
-.sheet-mechanics,
-.sheet-relationships,
-.sheet-backstory,
-.sheet-journal {
+.mechanics,
+.relationships,
+.backstory,
+.journal {
 	display: none;
 }
 
 /* show the selected tab */
-.sheet-tabstoggle[value="mechanics"] ~ div.sheet-mechanics,
-.sheet-tabstoggle[value="relationships"] ~ div.sheet-relationships,
-.sheet-tabstoggle[value="backstory"] ~ div.sheet-backstory,
-.sheet-tabstoggle[value="journal"] ~ div.sheet-journal {
+.tabstoggle[value="mechanics"] ~ div.mechanics,
+.tabstoggle[value="relationships"] ~ div.relationships,
+.tabstoggle[value="backstory"] ~ div.backstory,
+.tabstoggle[value="journal"] ~ div.sheetournal {
 	display: grid;
 }
 
-/* all classes should be prefixed with sheet- for Roll20 to read it */
-.sheet-mechanics {
+.mechanics {
 	grid-template-columns: 1fr 5% 1fr;
 	grid-template-rows: auto;
 	grid-template-areas: 
 		"header header header"
+		"aspects . ."
+		"aspects . ."
+		"aspects . ."
+		"aspects . ."
 		"aspects . .";
 }
 
-.sheet-header {
+.header {
 	grid-area: header;
 	background-color: pink;
 }
 
-
-.sheet-aspects {
+.aspects {
 	grid-area: aspects;
 	background-color: aquamarine;
 }
 
+.stat {
+	display: flex;
+	align-items: center;
+}
+
+label {
+	display: block;
+	padding-top: 10px;
+}
+
+/* Fonts */
 h2 {
 	font-family: 'Hachi Maru Pop', cursive;
 }
 
-h3 {
+h3,
+label {
 	font-family: 'Montserrat', sans-serif;
 }
