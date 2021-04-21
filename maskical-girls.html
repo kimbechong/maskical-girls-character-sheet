@@ -1,36 +1,35 @@
 <!-- https://wiki.roll20.net/CSS_Wizardry#Tabs -->
 <!-- https://wiki.roll20.net/Button#Action_Button -->
-<!-- <div class="main"> -->
-  <div>
-    <!-- action buttons used as event to trigger sheetworkers -->
-    <!-- `type` attribute must be set to `action` -->
-    <!-- `name` attribute must be defined  & have an `act_` prefix -->
-    <button type="action" name="act_mechanics">Mechanics</button>
-    <button type="action" name="act_relationships">Relationships</button>
-    <button type="action" name="act_backstory">Backstory</button>
-    <button type="action" name="act_journal">Journal</button>
-  </div>
 
-  <input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='mechanics' />
+<div>
+  <!-- action buttons used as event to trigger sheetworkers -->
+  <!-- `type` attribute must be set to `action` -->
+  <!-- `name` attribute must be defined  & have an `act_` prefix -->
+  <button type="action" name="act_mechanics">Mechanics</button>
+  <button type="action" name="act_relationships">Relationships</button>
+  <button type="action" name="act_backstory">Backstory</button>
+  <button type="action" name="act_journal">Journal</button>
+</div>
 
-  <div class="sheet-mechanics">
-    <h2 class="sheet-header">Mechanics</h2>
-    <div class="sheet-aspects">
-      <h3>Aspects</h3>
-      <button type="roll" name="roll_exampleroll1" value="/roll d6" ></button>
-    </div>
+<input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='mechanics' />
+
+<div class="sheet-mechanics">
+  <h2 class="sheet-header">Mechanics</h2>
+  <div class="sheet-aspects">
+    <h3>Aspects</h3>
+    <button type="roll" name="roll_exampleroll1" value="/roll d6" ></button>
   </div>
-  </div>
-  <div class="sheet-relationships">
-    <h2>Relationships</h2>
-  </div>
-  <div class="sheet-backstory">
-    <h2>Backstory</h2>
-  </div>
-  <div class="sheet-journal">
-    <h2>Journal</h2>
-  </div>
-<!-- </div> -->
+</div>
+</div>
+<div class="sheet-relationships">
+  <h2>Relationships</h2>
+</div>
+<div class="sheet-backstory">
+  <h2>Backstory</h2>
+</div>
+<div class="sheet-journal">
+  <h2>Journal</h2>
+</div>
 
 <script type="text/worker">
   const tabsList = ["mechanics", "relationships", "backstory", "journal"];
