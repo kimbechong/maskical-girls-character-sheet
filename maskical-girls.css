@@ -22,12 +22,7 @@
 	grid-template-rows: auto;
 	grid-template-areas: 
 		"header header header"
-		"aspects . ."
-		"aspects . ."
-		"aspects . ."
-		"aspects . ."
-		"aspects . ."
-		"aspects . .";
+		"aspects . pains";
 }
 
 .header {
@@ -40,9 +35,14 @@
 	background-color: aquamarine;
 }
 
-.stat {
+.flex-row {
 	display: flex;
 	align-items: center;
+}
+
+.pains {
+	grid-area: pains;
+	background-color: powderblue;
 }
 
 /* replace default d20 with d6 icon */
