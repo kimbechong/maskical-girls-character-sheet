@@ -19,31 +19,69 @@
 
   <div class="aspects">
     <h3>Aspects</h3>
-    <div class="stat">
+    <div class="flex-row" id="rebel">
       <button type="roll" class="button-roll" name="roll_rebel" value="/roll 2d6 + @{rebel}"></button>
       <input type="number" name="attr_rebel" value="0" />
       <label>Rebel</label>
     </div>
-    <div class="stat">
+    <div class="flex-row" id="witch">
       <button type="roll" class="button-roll" name="roll_witch" value="/roll 2d6 + @{witch}"></button>
       <input type="number" name="attr_witch" value="0" />
       <label>Witch</label>
     </div>
-    <div class="stat">
+    <div class="flex-row" id="savior">
       <button type="roll" class="button-roll" name="roll_savior" value="/roll 2d6 + @{savior}"></button>
       <input type="number" name="attr_savior" value="0" />
       <label>Savior</label>
     </div>
-    <div class="stat">
+    <div class="flex-row" id="devil">
       <button type="roll" class="button-roll" name="roll_devil" value="/roll 2d6 + @{devil}"></button>
       <input type="number" name="attr_devil" value="0" />
       <label>Devil</label>
     </div>
-    <div class="stat">
+    <div class="flex-row" id="human">
       <button type="roll" class="button-roll" name="roll_human" value="/roll 2d6 + @{human}"></button>
       <input type="number" name="attr_human" value="0" />
       <label>Human</label>
     </div>
+  </div>
+
+  <div class="pains">
+    <h3>Pains</h3>
+    <div class="flex-row" id="afraid">
+      <input type="checkbox" name="attr_afraid" />
+      <label for="pain">Afraid</label>
+    </div>
+    <p>Effect: -2 Fight (Rebel) & See Beyond (Witch)</p>
+    <p>To clear: Run Away</p>
+
+    <div class="flex-row" id="hopeless">
+      <input type="checkbox" name="attr_hopeless" />
+      <label for="hopeless">Hopeless</label>
+    </div>
+    <p>Effect: -2 Wield Magic (Witch)</p>
+    <p>To clear: Fling into Easy Relief</p>
+
+    <div class="flex-row" id="insecure">
+      <input type="checkbox" name="attr_insecure" />
+      <label for="insecure">Insecure</label>
+    </div>
+    <p>Effect: -2 Stand Strong (Savior)/Reject Influence</p>
+    <p>To clear: Take a Foolhardy Action</p>
+
+    <div class="flex-row" id="guilty">
+      <input type="checkbox" name="attr_guilty" />
+      <label for="guilty">Guilty</label>
+    </div>
+    <p>Effect: -2 Sway/Observe (Devil)</p>
+    <p>To clear: Make a Sacrifice</p>
+
+    <div class="flex-row" id="angry">
+      <input type="checkbox" name="attr_angry" />
+      <label for="angry">Angry</label>
+    </div>
+    <p>Effect: -2 Comfort/Understand (Human)</p>
+    <p>To clear: Hurt Someone or Break Something</p>
   </div>
 
 </div>
