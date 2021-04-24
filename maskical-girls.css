@@ -13,7 +13,7 @@
 .tabstoggle[value="mechanics"] ~ div.mechanics,
 .tabstoggle[value="relationships"] ~ div.relationships,
 .tabstoggle[value="backstory"] ~ div.backstory,
-.tabstoggle[value="journal"] ~ div.sheetournal {
+.tabstoggle[value="journal"] ~ div.journal {
 	display: grid;
 }
 
@@ -44,6 +44,12 @@
 	align-items: center;
 }
 
+/* replace default d20 with d6 icon */
+button[type=roll].button-roll::before {
+    font-family: "dicefontd6" !important;
+    content: "F" !important;
+}
+
 label {
 	display: block;
 	padding-top: 10px;
@@ -52,10 +58,11 @@ label {
 
 /* Fonts */
 h2 {
-	font-family: 'Hachi Maru Pop', cursive;
+	font-family: "Hachi Maru Pop", cursive;
 }
 
-h3,
-label {
-	font-family: 'Montserrat', sans-serif;
+h3, 
+label, 
+p {
+	font-family: "Montserrat", sans-serif;
 }
