@@ -53,6 +53,10 @@ button.tab {
 	background-color: powderblue;
 }
 
+#extra-info {
+	color: gray;
+}
+
 /* replace default d20 with d6 icon */
 button[type=roll].button-roll::before {
     font-family: "dicefontd6" !important;
