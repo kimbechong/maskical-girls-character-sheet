@@ -5,16 +5,25 @@
   <!-- action buttons used as event to trigger sheetworkers -->
   <!-- `type` attribute must be set to `action` -->
   <!-- `name` attribute must be defined  & have an `act_` prefix -->
-  <button type="action" name="act_mechanics">Mechanics</button>
-  <button type="action" name="act_relationships">Relationships</button>
-  <button type="action" name="act_backstory">Backstory</button>
-  <button type="action" name="act_journal">
-    <img src="">
+  <button type="action" name="act_mechanics" class="tab">
+    <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/pentagram.svg" alt="dice icon" class="icon">
+    Mechanics
+  </button>
+  <button type="action" name="act_relationships" class="tab">
+    <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/heart-wings.svg" alt="dice icon" class="icon">
+    Relationships
+  </button>
+  <button type="action" name="act_backstory" class="tab">
+    <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/tarot.svg" alt="dice icon" class="icon">
+    Backstory
+  </button>
+  <button type="action" name="act_journal" class="tab">
+    <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/magic-book.svg" alt="dice icon" class="icon">
     Journal
   </button>
 </div>
 
-<input type='hidden' class='tabstoggle' name='attr_sheetTab' value='mechanics' />
+<input type="hidden" class="tabstoggle" name="attr_sheetTab" value="mechanics" />
 
 <div class="mechanics">
 
@@ -114,4 +123,5 @@
           });
       });
   });
+
 </script>
