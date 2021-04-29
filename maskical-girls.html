@@ -1,119 +1,127 @@
 <!-- https://wiki.roll20.net/CSS_Wizardry#Tabs -->
 <!-- https://wiki.roll20.net/Button#Action_Button -->
 
-<div>
-  <!-- action buttons used as event to trigger sheetworkers -->
-  <!-- `type` attribute must be set to `action` -->
-  <!-- `name` attribute must be defined  & have an `act_` prefix -->
-  <button type="action" name="act_mechanics" class="tab">
-    <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/pentagram.svg" alt="dice icon" class="icon">
-    Mechanics
-  </button>
-  <button type="action" name="act_relationships" class="tab">
-    <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/heart-wings.svg" alt="dice icon" class="icon">
-    Relationships
-  </button>
-  <button type="action" name="act_backstory" class="tab">
-    <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/tarot.svg" alt="dice icon" class="icon">
-    Backstory
-  </button>
-  <button type="action" name="act_journal" class="tab">
-    <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/magic-book.svg" alt="dice icon" class="icon">
-    Journal
-  </button>
-</div>
-
-<input type="hidden" class="tabstoggle" name="attr_sheetTab" value="mechanics" />
-
-<div class="mechanics">
-
-  <h2 class="header">Mechanics</h2>
-
-  <div class="aspects">
-    <h3>Aspects</h3>
-    <div class="flex-row" id="rebel">
-      <button type="roll" class="button-roll" name="roll_rebel" value="/roll 2d6 + @{rebel}"></button>
-      <input type="number" name="attr_rebel" value="0" />
-      <label>Rebel</label>
-    </div>
-    <div class="flex-row" id="witch">
-      <button type="roll" class="button-roll" name="roll_witch" value="/roll 2d6 + @{witch}"></button>
-      <input type="number" name="attr_witch" value="0" />
-      <label>Witch</label>
-    </div>
-    <div class="flex-row" id="savior">
-      <button type="roll" class="button-roll" name="roll_savior" value="/roll 2d6 + @{savior}"></button>
-      <input type="number" name="attr_savior" value="0" />
-      <label>Savior</label>
-    </div>
-    <div class="flex-row" id="devil">
-      <button type="roll" class="button-roll" name="roll_devil" value="/roll 2d6 + @{devil}"></button>
-      <input type="number" name="attr_devil" value="0" />
-      <label>Devil</label>
-    </div>
-    <div class="flex-row" id="human">
-      <button type="roll" class="button-roll" name="roll_human" value="/roll 2d6 + @{human}"></button>
-      <input type="number" name="attr_human" value="0" />
-      <label>Human</label>
-    </div>
+<div id="main">
+  <div>
+    <!-- action buttons used as event to trigger sheetworkers -->
+    <!-- `type` attribute must be set to `action` -->
+    <!-- `name` attribute must be defined  & have an `act_` prefix -->
+    <button type="action" name="act_mechanics" class="tab">
+      <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/pentagram.svg"
+        alt="dice icon" class="icon">
+      Mechanics
+    </button>
+    <button type="action" name="act_relationships" class="tab">
+      <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/heart-wings.svg"
+        alt="dice icon" class="icon">
+      Relationships
+    </button>
+    <button type="action" name="act_backstory" class="tab">
+      <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/tarot.svg"
+        alt="dice icon" class="icon">
+      Backstory
+    </button>
+    <button type="action" name="act_journal" class="tab">
+      <img src="https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/magic-book.svg"
+        alt="dice icon" class="icon">
+      Journal
+    </button>
   </div>
 
-  <div class="pains">
-    <h3>Pains</h3>
-    <div class="flex-row" id="afraid">
-      <input type="checkbox" class="pain-checkbox" name="attr_afraid" />
-      <label for="attr_afraid">Afraid</label>
-    </div>
-    <p>Effect: -2 Fight (Rebel) & See Beyond (Witch)</p>
-    <p>To clear: Run Away</p>
+  <input type="hidden" class="tabstoggle" name="attr_sheetTab" value="mechanics" />
 
-    <div class="flex-row" id="hopeless">
-      <input type="checkbox" name="attr_hopeless" />
-      <label for="attr_hopeless">Hopeless</label>
-    </div>
-    <p>Effect: -2 Wield Magic (Witch)</p>
-    <p>To clear: Fling into Easy Relief</p>
+  <div class="mechanics">
 
-    <div class="flex-row" id="insecure">
-      <input type="checkbox" name="attr_insecure" />
-      <label for="attr_insecure">Insecure</label>
-    </div>
-    <p>Effect: -2 Stand Strong (Savior)/Reject Influence</p>
-    <p>To clear: Take a Foolhardy Action</p>
+    <h2 class="header">Mechanics</h2>
 
-    <div class="flex-row" id="guilty">
-      <input type="checkbox" name="attr_guilty" />
-      <label for="attr_guilty">Guilty</label>
+    <div class="aspects">
+      <h3>Aspects</h3>
+      <div class="flex-row" id="rebel">
+        <button type="roll" class="button-roll" name="roll_rebel" value="/roll 2d6 + @{rebel}"></button>
+        <input type="number" name="attr_rebel" value="0" />
+        <label>Rebel</label>
+      </div>
+      <div class="flex-row" id="witch">
+        <button type="roll" class="button-roll" name="roll_witch" value="/roll 2d6 + @{witch}"></button>
+        <input type="number" name="attr_witch" value="0" />
+        <label>Witch</label>
+      </div>
+      <div class="flex-row" id="savior">
+        <button type="roll" class="button-roll" name="roll_savior" value="/roll 2d6 + @{savior}"></button>
+        <input type="number" name="attr_savior" value="0" />
+        <label>Savior</label>
+      </div>
+      <div class="flex-row" id="devil">
+        <button type="roll" class="button-roll" name="roll_devil" value="/roll 2d6 + @{devil}"></button>
+        <input type="number" name="attr_devil" value="0" />
+        <label>Devil</label>
+      </div>
+      <div class="flex-row" id="human">
+        <button type="roll" class="button-roll" name="roll_human" value="/roll 2d6 + @{human}"></button>
+        <input type="number" name="attr_human" value="0" />
+        <label>Human</label>
+      </div>
     </div>
-    <p>Effect: -2 Sway/Observe (Devil)</p>
-    <p>To clear: Make a Sacrifice</p>
 
-    <div class="flex-row" id="angry">
-      <input type="checkbox" name="attr_angry" />
-      <label for="attr_angry">Angry</label>
+    <div class="pains">
+      <h3>Pains</h3>
+      <div class="flex-row" id="afraid">
+        <input type="checkbox" class="pain-checkbox" name="attr_afraid" />
+        <label for="attr_afraid">Afraid</label>
+      </div>
+      <p>Effect: -2 Fight (Rebel) & See Beyond (Witch)</p>
+      <p>To clear: Run Away</p>
+
+      <div class="flex-row" id="hopeless">
+        <input type="checkbox" name="attr_hopeless" />
+        <label for="attr_hopeless">Hopeless</label>
+      </div>
+      <p>Effect: -2 Wield Magic (Witch)</p>
+      <p>To clear: Fling into Easy Relief</p>
+
+      <div class="flex-row" id="insecure">
+        <input type="checkbox" name="attr_insecure" />
+        <label for="attr_insecure">Insecure</label>
+      </div>
+      <p>Effect: -2 Stand Strong (Savior)/Reject Influence</p>
+      <p>To clear: Take a Foolhardy Action</p>
+
+      <div class="flex-row" id="guilty">
+        <input type="checkbox" name="attr_guilty" />
+        <label for="attr_guilty">Guilty</label>
+      </div>
+      <p>Effect: -2 Sway/Observe (Devil)</p>
+      <p>To clear: Make a Sacrifice</p>
+
+      <div class="flex-row" id="angry">
+        <input type="checkbox" name="attr_angry" />
+        <label for="attr_angry">Angry</label>
+      </div>
+      <p>Effect: -2 Comfort/Understand (Human)</p>
+      <p>To clear: Hurt Someone or Break Something</p>
+
     </div>
-    <p>Effect: -2 Comfort/Understand (Human)</p>
-    <p>To clear: Hurt Someone or Break Something</p>
 
   </div>
 
-</div>
+  <div class="relationships">
+    <h2>Relationships</h2>
+  </div>
+  <div class="backstory">
+    <h2>Backstory</h2>
+  </div>
+  <div class="journal">
+    <h2>Journal</h2>
+  </div>
 
-<div class="relationships">
-  <h2>Relationships</h2>
-</div>
-<div class="backstory">
-  <h2>Backstory</h2>
-</div>
-<div class="journal">
-  <h2>Journal</h2>
-</div>
+  <!-- Flaticon icon attribution -->
+  <div id="extra-info">
+    <a href="https://github.com/kimbechong/maskical-girls-character-sheet">Character Sheet GitHub Repository</a>
+    <br>
+    Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+      title="Flaticon">www.flaticon.com<a>
+  </div>
 
-<!-- Flaticon icon attribution -->
-<div id="extra-info">
-  <a href="https://github.com/kimbechong/maskical-girls-character-sheet">Character Sheet GitHub Repository</a>
-  <br>
-  Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com<a>
 </div>
 
 <script type="text/worker">

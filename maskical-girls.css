@@ -1,6 +1,45 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Montserrat&display=swap');
 
+/* background rainbow gradient */
+#main {
+	height: 100%;
+	width: 100%;
+	left:0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	position: relative;
+	background: linear-gradient(124deg, #fbb9c5, #FCC5BB, #fdd0b1, #FBE0BC, #f9efc7, #DEEEC3, #c3edbf, #BEE6D3, #b8dfe6, #BFCDE2, #c5bbde, #d7c7ff);
+	background-size: 300% 300%;
+  
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+	animation: rainbow 18s ease infinite;
+}
+  
+@-webkit-keyframes rainbow {
+	0%{background-position:0% 82%}
+	50%{background-position:100% 19%}
+	100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+	0%{background-position:0% 82%}
+	50%{background-position:100% 19%}
+	100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+	0%{background-position:0% 82%}
+	50%{background-position:100% 19%}
+	100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+	0%{background-position:0% 82%}
+	50%{background-position:100% 19%}
+	100%{background-position:0% 82%}
+}
+
 /*Configure the tab buttons*/
 .mechanics,
 .relationships,
@@ -35,12 +74,16 @@ button.tab {
 
 .header {
 	grid-area: header;
-	background-color: pink;
+	margin: 5px 0px 5px 0px;
+	/* background-color: white;
+	opacity: 0.5; */
 }
 
 .aspects {
 	grid-area: aspects;
-	background-color: aquamarine;
+	outline: white solid 3px;
+	/* background-color: white;
+	opacity: 0.5; */
 }
 
 .flex-row {
@@ -50,7 +93,9 @@ button.tab {
 
 .pains {
 	grid-area: pains;
-	background-color: powderblue;
+	outline: white solid 3px;
+	/* background-color: white;
+	opacity: 0.5; */
 }
 
 #extra-info {
@@ -59,9 +104,25 @@ button.tab {
 
 /* replace default d20 with d6 icon */
 button[type=roll].button-roll::before {
-    font-family: "dicefontd6" !important;
-    content: "F" !important;
+	content: " " !important;
+    /* font-family: "dicefontd6" !important;
+    content: "F" !important; */
 }
+
+button[type="roll"].button-roll:hover{
+	background-position: 0;
+}
+
+button[type="roll"].button-roll{
+	background-image: url(https://raw.githubusercontent.com/kimbechong/maskical-girls-character-sheet/main/images/d6.svg); 
+	background-size: 26px 26px;
+	background-repeat: no-repeat;
+	width: 26px;
+	height: 26px;
+	border-style: none;
+	background-color: transparent;
+	margin-left: 5px;
+  }
 
 label {
 	display: block;
